@@ -3,6 +3,7 @@ import {
   Text,
   View,
   type ImageSourcePropType,
+  StyleSheet,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
@@ -20,10 +21,8 @@ export default function LandingPage() {
       <Stack.Screen options={{ headerShown: false }} />
       <StatusBar style="light" />
       <ImageBackground className="flex-1" source={background}>
-        <SafeAreaView className="flex-1 items-stretch justify-between p-4">
-          <Text className="mx-auto mt-16 text-6xl font-bold text-white">
-            blueskeet
-          </Text>
+        <SafeAreaView style={styles.container}>
+          <Text style={styles.text}>blueskeet</Text>
           <LinkButton href="/login" variant="white">
             Log in
           </LinkButton>
@@ -32,3 +31,18 @@ export default function LandingPage() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 16,
+  },
+  text: {
+    fontSize: 48,
+    fontWeight: "bold",
+    color: "white",
+    marginBottom: 16,
+  },
+});
