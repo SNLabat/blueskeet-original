@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Graysky | Privacy Policy",
+  title: "blueskeet | Privacy Policy",
   description: "Privacy Policy",
 };
 
@@ -49,14 +49,14 @@ export default function Page() {
         <li>
           <p>
             <strong className="font-bold">Application</strong> refers to
-            Graysky, the software program provided by the Company.
+            blueskeet, the software program provided by the Company.
           </p>
         </li>
         <li>
           <p>
             <strong className="font-bold">Company</strong> (referred to as
             either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or
-            &quot;Our&quot; in this Agreement) refers to Graysky.
+            &quot;Our&quot; in this Agreement) refers to blueskeet.
           </p>
         </li>
         <li>

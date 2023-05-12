@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import background from "~/assets/graysky.png";
+import background from "~/assets/blueskeet.png";
 import { EmailInput } from "./email-input";
 
 export default function LandingPage() {
@@ -14,7 +14,7 @@ export default function LandingPage() {
       {/* <RainAnimation /> */}
       <div className="flex flex-col text-white">
         <h1 className="text-center text-6xl font-bold [text-shadow:_0_1px_2px_rgb(0_0_0)] md:text-9xl">
-          GRAYSKY
+          blueskeet
         </h1>
         <p className="text-center [text-shadow:_0_1px_2px_rgb(0_0_0)] md:text-xl">
           a bluesky client

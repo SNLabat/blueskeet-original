@@ -2,7 +2,7 @@
 // import { createTRPCNext } from "@trpc/next";
 // import superjson from "superjson";
 
-// import type { AppRouter } from "@graysky/api";
+// import type { AppRouter } from "@blueskeet/api";
 
 // const getBaseUrl = () => {
 //   if (typeof window !== "undefined") return ""; // browser should use relative url
@@ -30,4 +30,4 @@
 //   ssr: false,
 // });
 
-// export { type RouterInputs, type RouterOutputs } from "@graysky/api";
+// export { type RouterInputs, type RouterOutputs } from "@blueskeet/api";

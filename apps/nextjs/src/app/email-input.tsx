@@ -59,9 +59,9 @@ export const EmailInput = () => {
             out{" "}
             <a
               className="underline"
-              href="https://staging.bsky.app/profile/graysky.app"
+              href="https://staging.bsky.app/profile/blueskeet.app"
             >
-              @graysky.app
+              @blueskeet.app
             </a>{" "}
             for info on how to join the early beta.
           </p>
