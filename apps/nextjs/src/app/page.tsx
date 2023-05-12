@@ -1,13 +1,14 @@
 import Image from "next/image";
 
 import { EmailInput } from "./email-input";
-import background from "/blueskeet.png";
+
+const backgroundImageUrl = "https://i.imgur.com/ha2N4KH.png";
 
 export default function LandingPage() {
   return (
     <main className="flex min-h-screen w-full flex-col items-center justify-center gap-16">
       <Image
-        src={background}
+        src={backgroundImageUrl}
         alt="a gray sky"
         className="absolute inset-0 -z-20 h-screen w-full object-cover"
       />
