@@ -1,41 +1,71 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { faEllipsisH, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import {
+  faAt,
+  faBan,
+  faEye,
+  faLanguage,
+  faLock,
+  faPlus,
+  faTicket,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { useTheme } from "@react-navigation/native";
-
-interface Section {
-  title: string;
-  options: string[];
-}
 
 export default function SettingsPage() {
   const { colors } = useTheme();
 
-  const sections: Section[] = [
-    { title: "Profiles", options: ["Add account"] },
-    { title: "Invite a Friend", options: ["Invites: 5"] },
+  const sections = [
+    { title: "Profiles", options: [{ label: "Add account", icon: faPlus }] },
+    {
+      title: "Invite a Friend",
+      options: [{ label: "Invites: 5", icon: faTicket }],
+    },
     {
       title: "Moderation",
-      options: ["Content Moderation", "Muted Accounts", "Blocked Accounts"],
+      options: [
+        { label: "Content Moderation", icon: faEye },
+        { label: "Muted Accounts", icon: faEyeSlash },
+        { label: "Blocked Accounts", icon: faBan },
+      ],
     },
     {
       title: "Advanced",
-      options: ["App Passwords", "Content Languages", "Change my handle"],
+      options: [
+        { label: "App Passwords", icon: faLock },
+        { label: "Content Languages", icon: faLanguage },
+        { label: "Change my handle", icon: faAt },
+      ],
+    },
+    {
+      title: "Danger zone",
+      options: [{ label: "Delete my account", icon: faTrashAlt }],
     },
   ];
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar style="light" />
       {sections.map((section, index) => (
         <View key={index} style={styles.sectionContainer}>
           <View style={styles.headerBox}>
-            <Text style={styles.sectionTitle}>{section.title}</Text>
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+              {section.title}
+            </Text>
           </View>
           {section.options.map((option, optionIndex) => (
-            <TouchableOpacity key={optionIndex} style={styles.optionContainer}>
+            <TouchableOpacity
+              key={optionIndex}
+              style={styles.optionContainer}
+              onPress={() => handleOptionPress(option)}
+            >
+              <FontAwesomeIcon
+                icon={option.icon}
+                style={[styles.optionIcon, { color: colors.text }]}
+              />
               <Text style={[styles.optionText, { color: colors.text }]}>
-                {option}
+                {option.label}
               </Text>
             </TouchableOpacity>
           ))}
@@ -64,10 +94,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 8,
-    color: "#000", // Set the font color to black
   },
   optionContainer: {
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 4,
+  },
+  optionIcon: {
+    marginRight: 8,
   },
   optionText: {
     fontSize: 16,
