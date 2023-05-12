@@ -9,7 +9,7 @@ import {
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
-import { LinkButton } from "../components/button";
+import { LinkButton } from "./components/button";
 import React, { useEffect, useRef } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
