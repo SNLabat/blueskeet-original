@@ -18,11 +18,12 @@ import {
 import { QueryClientProvider } from "@tanstack/react-query";
 import { useColorScheme } from "nativewind";
 
-import { ComposerProvider } from "../components/composer";
-import { AgentProvider } from "../lib/agent";
-import { LogOutProvider } from "../lib/log-out-context";
-import { queryClient } from "../lib/query-client";
-import { fetchHandler } from "../lib/utils/polyfills/fetch-polyfill";
+import { ComposerProvider } from "./components/composer";
+import { AgentProvider } from "./lib/agent";
+import { LogOutProvider } from "./lib/log-out-context";
+import { queryClient } from "./lib/query-client";
+import { fetchHandler } from "./lib/utils/polyfills/fetch-polyfill";
+import React from "react";
 
 export default function RootLayout() {
   const segments = useSegments();

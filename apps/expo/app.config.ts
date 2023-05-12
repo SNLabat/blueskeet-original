@@ -1,13 +1,14 @@
 import type { ExpoConfig } from "@expo/config";
 
 const defineConfig = (): ExpoConfig => ({
-  name: "expo",
-  slug: "expo",
-  scheme: "expo",
+  name: "blueskeet",
+  slug: "blueskeet",
+  scheme: "blueskeet",
   version: "1.0.0",
+  owner: "snlabat",
   orientation: "portrait",
   icon: "./assets/icon.png",
-  userInterfaceStyle: "light",
+  userInterfaceStyle: "automatic",
   splash: {
     image: "./assets/icon.png",
     resizeMode: "contain",
@@ -15,6 +16,7 @@ const defineConfig = (): ExpoConfig => ({
   },
   updates: {
     fallbackToCacheTimeout: 0,
+    url: "https://u.expo.dev/2b803f3b-59e8-4c91-8a37-2ca3c2696416",
   },
   assetBundlePatterns: ["**/*"],
   ios: {
@@ -29,7 +31,7 @@ const defineConfig = (): ExpoConfig => ({
   },
   extra: {
     eas: {
-      // projectId: "your-project-id",
+      projectId: "2b803f3b-59e8-4c91-8a37-2ca3c2696416",
     },
   },
   plugins: ["./expo-plugins/with-modify-gradle.js"],

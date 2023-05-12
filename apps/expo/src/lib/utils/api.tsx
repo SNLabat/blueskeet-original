@@ -5,13 +5,13 @@ import { httpBatchLink } from "@trpc/client";
 import { createTRPCReact } from "@trpc/react-query";
 import superjson from "superjson";
 
-import { type AppRouter } from "@blueskeet/api";
+import { type AppRouter } from "@graysky/api";
 
 /**
  * A set of typesafe hooks for consuming your API.
  */
 export const api = createTRPCReact<AppRouter>();
-export { type RouterInputs, type RouterOutputs } from "@blueskeet/api";
+export { type RouterInputs, type RouterOutputs } from "@graysky/api";
 
 /**
  * Extend this function when going to production by
@@ -26,10 +26,7 @@ const getBaseUrl = () => {
    * **NOTE**: This is only for development. In production, you'll want to set the
    * baseUrl to your production API URL.
    */
-  const debuggerHost =
-    Constants.manifest?.debuggerHost ??
-    Constants.manifest2?.extra?.expoGo?.debuggerHost;
-  const localhost = debuggerHost?.split(":")[0];
+  const localhost = Constants.manifest?.debuggerHost?.split(":")[0];
   if (!localhost) {
     // return "https://your-production-url.com";
     throw new Error(

@@ -9,6 +9,7 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
 import { LinkButton } from "../components/button";
+import React from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const background = require("../../assets/blueskeet.png") as ImageSourcePropType;
