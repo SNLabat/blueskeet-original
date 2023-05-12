@@ -405,7 +405,7 @@ export default function Page() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: mozzius@protonmail.com</li>
+        <li>By email: @snlabat@gmail.com</li>
       </ul>
     </div>
   );
