@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "blueskeet",
     images: [
       {
-        url: "https://blueskeet.app/blueskeet.png",
+        url: "https://i.imgur.com/AWE9c61.png",
         width: 1024,
         height: 1024,
       },
@@ -25,7 +25,7 @@ export const metadata = {
     description: "Experience a whole different skyline.",
     images: [
       {
-        url: "https://blueskeet.app/blueskeet.png",
+        url: "https://i.imgur.com/AWE9c61.png",
         width: 1024,
         height: 1024,
       },

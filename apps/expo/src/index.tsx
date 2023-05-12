@@ -3,30 +3,49 @@ import {
   Text,
   View,
   type ImageSourcePropType,
+  Animated,
   StyleSheet,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
 import { LinkButton } from "../components/button";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const background = require("../../assets/blueskeet.png") as ImageSourcePropType;
 
 export default function LandingPage() {
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  }, [fadeAnim]);
+
   return (
-    <View className="flex-1">
+    <View style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
       <StatusBar style="light" />
-      <ImageBackground className="flex-1" source={background}>
-        <SafeAreaView style={styles.container}>
-          <Text style={styles.text}>blueskeet</Text>
-          <LinkButton href="/login" variant="white">
-            Log in
-          </LinkButton>
-        </SafeAreaView>
+      <ImageBackground
+        style={styles.background}
+        source={background}
+        imageStyle={styles.image}
+      >
+        <View style={styles.overlay} />
+        <View style={styles.content}>
+          <Animated.Text style={[styles.text, { opacity: fadeAnim }]}>
+            blueskeet
+          </Animated.Text>
+          <Animated.View style={[styles.buttonContainer, { opacity: fadeAnim }]}>
+            <LinkButton href="/login" variant="white">
+              Log in
+            </LinkButton>
+          </Animated.View>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -34,6 +53,19 @@ export default function LandingPage() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  background: {
+    flex: 1,
+  },
+  image: {
+    resizeMode: "cover",
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(55, 0, 55, 0.5)",
+  },
+  content: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -44,5 +76,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     marginBottom: 16,
+  },
+  buttonContainer: {
+    opacity: 0,
   },
 });
