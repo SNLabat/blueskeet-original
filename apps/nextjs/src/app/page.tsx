@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import background from "~/assets/blueskeet.png";
+import background from "./assets/blueskeet.png";
 import { EmailInput } from "./email-input";
 
 export default function LandingPage() {
