@@ -99,64 +99,82 @@ export default function RootLayout() {
     // early return if we're still loading
     if (loading) return;
     const atRoot = segments.length === 0;
-    const inAuthGroup = segments[0] === "(auth)";
+    const inAuthGroup = segments[0] === "(auth  )"; 
+ // redirect depending on login state
+ useEffect(() => {
+  // early return if we're still loading
+  if (loading) return;
+  const atRoot = segments.length === 0;
+  const inAuthGroup = segments[0] === "(auth)";
 
-    if (
-      // If the user is not signed in and the initial segment is not anything in the auth group.
-      !did &&
-      !inAuthGroup &&
-      !atRoot
-    ) {
-      // Redirect to the sign-in page.
-      router.replace("/login");
-    } else if (did && (inAuthGroup || atRoot)) {
-      // Redirect away from the sign-in page.
-      router.replace("/skyline");
-    }
-  }, [did, segments, router, loading]);
+  if (!did && !inAuthGroup && !atRoot) {
+    router.replace("/login");
+  } else if (did && (inAuthGroup || atRoot)) {
+    router.replace("/skyline");
+  }
+}, [did, segments, router, loading]);
 
-  const logOut = useCallback(async () => {
-    await AsyncStorage.removeItem("session");
-    setSession(null);
-    setInvalidator((i) => i + 1);
-  }, []);
+const logOut = useCallback(async () => {
+  await AsyncStorage.removeItem("session");
+  setSession(null);
+  setInvalidator((i) => i + 1);
+}, []);
 
-  const theme = colorScheme === "light" ? DefaultTheme : DarkTheme;
-  return (
-    <ThemeProvider value={theme}>
-      <QueryClientProvider client={queryClient}>
-        <SafeAreaProvider>
-          <AgentProvider value={agent}>
-            <StatusBar style={colorScheme === "light" ? "dark" : "light"} />
-            {loading && <SplashScreen />}
-            <LogOutProvider value={logOut}>
-              <ActionSheetProvider>
-                <ComposerProvider>
-                  <Stack
-                    screenOptions={{
-                      headerShown: true,
-                      fullScreenGestureEnabled: true,
-                      headerStyle: {
-                        backgroundColor:
-                          colorScheme === "light" ? "#fff" : "#000",
-                      },
+const theme = colorScheme === "light" ? DefaultTheme : DarkTheme;
+return (
+  <ThemeProvider value={theme}>
+    <QueryClientProvider client={queryClient}>
+      <SafeAreaProvider>
+        <AgentProvider value={agent}>
+          <StatusBar style={colorScheme === "light" ? "dark" : "light"} />
+          {loading && <SplashScreen />}
+          <LogOutProvider value={logOut}>
+            <ActionSheetProvider>
+              <ComposerProvider>
+                <Stack
+                  screenOptions={{
+                    headerShown: true,
+                    fullScreenGestureEnabled: true,
+                    headerStyle: {
+                      backgroundColor:
+                        colorScheme === "light" ? "#fff" : "#000",
+                    },
+                  }}
+                >
+                  <Stack.Screen
+                    name="settings/index"
+                    component={SettingsPage}
+                    options={{
+                      headerTitle: "Settings",
+                      presentation: "modal",
+                      headerBackVisible: true,
                     }}
-                  >
-                    <Stack.Screen
-                      name="settings/index"
-                      options={{
-                        headerTitle: "Settings",
-                        presentation: "modal",
-                        headerBackVisible: true,
-                      }}
-                    />
-                  </Stack>
-                </ComposerProvider>
-              </ActionSheetProvider>
-            </LogOutProvider>
-          </AgentProvider>
-        </SafeAreaProvider>
-      </QueryClientProvider>
-    </ThemeProvider>
-  );
+                  />
+                  <Stack.Screen
+                    name="moderation/index"
+                    component={ModerationPage}
+                    options={{
+                      headerTitle: "Moderation",
+                      presentation: "modal",
+                      headerBackVisible: true,
+                    }}
+                  />
+                  <Stack.Screen
+                    name="skins/index"
+                    component={SkinsPage}
+                    options={{
+                      headerTitle: "Change Theme",
+                      presentation: "modal",
+                      headerBackVisible: true,
+                    }}
+                  />
+                </Stack>
+              </ComposerProvider>
+            </ActionSheetProvider>
+          </LogOutProvider>
+        </AgentProvider>
+      </SafeAreaProvider>
+    </QueryClientProvider>
+  </ThemeProvider>
+);
 }

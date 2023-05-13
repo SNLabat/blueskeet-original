@@ -149,6 +149,22 @@ export default function RootLayout() {
                         headerBackVisible: true,
                       }}
                     />
+                    <Stack.Screen
+                      name="moderation/index"
+                      options={{
+                        headerTitle: "Moderation",
+                        presentation: "modal",
+                        headerBackVisible: true,
+                      }}
+                    />
+                    <Stack.Screen
+                      name="skins/index"
+                      options={{
+                        headerTitle: "Change Theme",
+                        presentation: "modal",
+                        headerBackVisible: true,
+                      }}
+                    />
                   </Stack>
                 </ComposerProvider>
               </ActionSheetProvider>

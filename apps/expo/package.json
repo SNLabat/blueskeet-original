@@ -52,6 +52,7 @@
     "graphemer": "^1.4.0",
     "lucide-react-native": "^0.216.0",
     "metro": "^0.76.4",
+    "metro-runtime": "^0.76.4",
     "metro-transform-worker": "^0.76.4",
     "nativewind": "^2.0.11",
     "prop-types": "^15.7.2",

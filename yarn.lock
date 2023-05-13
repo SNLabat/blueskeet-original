@@ -1217,6 +1217,7 @@
     "@babel/plugin-transform-runtime" "^7.21.4"
     "@expo/metro-config" "^0.7.1"
     "@expo/react-native-action-sheet" "^4.0.1"
+    "@fortawesome/fontawesome-svg-core" "^6.4.0"
     "@fortawesome/free-regular-svg-icons" "^6.4.0"
     "@fortawesome/free-solid-svg-icons" "^6.4.0"
     "@fortawesome/react-native-fontawesome" "^0.3.0"
@@ -7363,18 +7364,18 @@ metro-resolver@0.76.4:
   resolved "https://registry.npmjs.org/metro-resolver/-/metro-resolver-0.76.4.tgz"
   integrity sha512-SXVNS+j055FLiAWx5Lems4Yw/dMxm6uo8j2ew76C+Vib++aSA/hcEoYHy1GB63jG6FmymPH3yrnyX0F6mcRnsQ==
 
-metro-runtime@0.73.9:
-  version "0.73.9"
-  resolved "https://registry.npmjs.org/metro-runtime/-/metro-runtime-0.73.9.tgz"
-  integrity sha512-d5Hs83FpKB9r8q8Vb95+fa6ESpwysmPr4lL1I2rM2qXAFiO7OAPT9Bc23WmXgidkBtD0uUFdB2lG+H1ATz8rZg==
+metro-runtime@^0.76.4, metro-runtime@0.76.4:
+  version "0.76.4"
+  resolved "https://registry.npmjs.org/metro-runtime/-/metro-runtime-0.76.4.tgz"
+  integrity sha512-ngNjwPTUrU3thjPZq+0zw/kwFHCtSx4WTIbxw3DNAyxzrgimgoYqtJb9KVFbE/d4Juan+JHymSDtovJstOMjmw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     react-refresh "^0.4.0"
 
-metro-runtime@0.76.4:
-  version "0.76.4"
-  resolved "https://registry.npmjs.org/metro-runtime/-/metro-runtime-0.76.4.tgz"
-  integrity sha512-ngNjwPTUrU3thjPZq+0zw/kwFHCtSx4WTIbxw3DNAyxzrgimgoYqtJb9KVFbE/d4Juan+JHymSDtovJstOMjmw==
+metro-runtime@0.73.9:
+  version "0.73.9"
+  resolved "https://registry.npmjs.org/metro-runtime/-/metro-runtime-0.73.9.tgz"
+  integrity sha512-d5Hs83FpKB9r8q8Vb95+fa6ESpwysmPr4lL1I2rM2qXAFiO7OAPT9Bc23WmXgidkBtD0uUFdB2lG+H1ATz8rZg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     react-refresh "^0.4.0"
