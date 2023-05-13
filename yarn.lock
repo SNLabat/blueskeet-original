@@ -1167,7 +1167,7 @@
   resolved "https://registry.npmjs.org/@bacons/react-views/-/react-views-1.1.3.tgz"
   integrity sha512-aLipQAkQKRzG64e28XHBpByyBPfANz0A6POqYHGyryHizG9vLCLNQwLe8gwFANEMBWW2Mx5YdQ7RkNdQMQ+CXQ==
 
-"@blueskeet/api@^0.1.0", "@blueskeet/api@file:/Users/labat/Desktop/blueskeet/blueskeet/packages/api":
+"@blueskeet/api@^0.1.0", "@blueskeet/api@file:/Users/labat/Desktop/blueskeet/packages/api":
   version "0.1.0"
   resolved "file:packages/api"
   dependencies:
@@ -1178,7 +1178,7 @@
     superjson "1.9.1"
     zod "^3.21.4"
 
-"@blueskeet/auth@^0.1.0", "@blueskeet/auth@file:/Users/labat/Desktop/blueskeet/blueskeet/packages/auth":
+"@blueskeet/auth@^0.1.0", "@blueskeet/auth@file:/Users/labat/Desktop/blueskeet/packages/auth":
   version "0.1.0"
   resolved "file:packages/auth"
   dependencies:
@@ -1191,13 +1191,13 @@
     react-dom "18.2.0"
     zod "^3.21.4"
 
-"@blueskeet/db@^0.1.0", "@blueskeet/db@file:/Users/labat/Desktop/blueskeet/blueskeet/packages/db":
+"@blueskeet/db@^0.1.0", "@blueskeet/db@file:/Users/labat/Desktop/blueskeet/packages/db":
   version "0.1.0"
   resolved "file:packages/db"
   dependencies:
     "@prisma/client" "^4.13.0"
 
-"@blueskeet/eslint-config@^0.1.0", "@blueskeet/eslint-config@file:/Users/labat/Desktop/blueskeet/blueskeet/packages/config/eslint":
+"@blueskeet/eslint-config@^0.1.0", "@blueskeet/eslint-config@file:/Users/labat/Desktop/blueskeet/packages/config/eslint":
   version "0.1.0"
   resolved "file:packages/config/eslint"
   dependencies:
@@ -1209,7 +1209,7 @@
     eslint-config-turbo "^1.9.3"
     eslint-plugin-react "7.32.2"
 
-"@blueskeet/expo@file:/Users/labat/Desktop/blueskeet/blueskeet/apps/expo":
+"@blueskeet/expo@file:/Users/labat/Desktop/blueskeet/apps/expo":
   version "0.1.0"
   resolved "file:apps/expo"
   dependencies:
@@ -1219,6 +1219,7 @@
     "@expo/react-native-action-sheet" "^4.0.1"
     "@fortawesome/free-regular-svg-icons" "^6.4.0"
     "@fortawesome/free-solid-svg-icons" "^6.4.0"
+    "@fortawesome/react-native-fontawesome" "^0.3.0"
     "@gorhom/bottom-sheet" "^4.4.5"
     "@react-native-async-storage/async-storage" "1.17.11"
     "@react-native-community/netinfo" "9.3.7"
@@ -1273,7 +1274,7 @@
     superjson "1.9.1"
     tailwind-merge "^1.12.0"
 
-"@blueskeet/nextjs@file:/Users/labat/Desktop/blueskeet/blueskeet/apps/nextjs":
+"@blueskeet/nextjs@file:/Users/labat/Desktop/blueskeet/apps/nextjs":
   version "0.1.0"
   resolved "file:apps/nextjs"
   dependencies:
@@ -1295,7 +1296,7 @@
     superjson "1.9.1"
     zod "^3.21.4"
 
-"@blueskeet/tailwind-config@^0.1.0", "@blueskeet/tailwind-config@file:/Users/labat/Desktop/blueskeet/blueskeet/packages/config/tailwind":
+"@blueskeet/tailwind-config@^0.1.0", "@blueskeet/tailwind-config@file:/Users/labat/Desktop/blueskeet/packages/config/tailwind":
   version "0.1.0"
   resolved "file:packages/config/tailwind"
 
@@ -1676,7 +1677,7 @@
   resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz"
   integrity sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==
 
-"@fortawesome/fontawesome-svg-core@~1 || ~6":
+"@fortawesome/fontawesome-svg-core@^6.4.0", "@fortawesome/fontawesome-svg-core@~1 || ~6":
   version "6.4.0"
   resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.4.0.tgz"
   integrity sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw==

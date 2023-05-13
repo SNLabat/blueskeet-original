@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@expo/metro-config": "^0.7.1",
     "@expo/react-native-action-sheet": "^4.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-native-fontawesome": "^0.3.0",

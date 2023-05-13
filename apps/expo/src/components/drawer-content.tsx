@@ -3,7 +3,14 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Constants from "expo-constants";
 import { Link } from "expo-router";
-import { LogOut, Palette, Settings2, Ticket } from "lucide-react-native";
+import {
+  Hand,
+  LogOut,
+  Moon,
+  Palette,
+  Settings2,
+  Ticket,
+} from "lucide-react-native";
 import { useColorScheme } from "nativewind";
 
 import { useLogOut } from "../lib/log-out-context";
@@ -47,15 +54,41 @@ export const DrawerContent = ({
         </TouchableOpacity>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel="Toggle theme"
+          accessibilityLabel="Display Mode"
           className="mt-2 w-full flex-row items-center py-2"
           onPress={() => toggleColorScheme()}
         >
-          <Palette color={textColor} />
+          <Moon color={textColor} />
           <Text className="ml-6 text-base font-medium dark:text-white">
-            Toggle theme
+            Change Display
           </Text>
         </TouchableOpacity>
+        <Link href="/skins" asChild>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Swap Theme"
+            className="mt-2 w-full flex-row items-center py-2"
+            onPress={() => toggleColorScheme()}
+          >
+            <Palette color={textColor} />
+            <Text className="ml-6 text-base font-medium dark:text-white">
+              Swap Theme
+            </Text>
+          </TouchableOpacity>
+        </Link>
+        <Link href="/moderation" asChild>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Moderation"
+            className="mt-2 w-full flex-row items-center py-2"
+            onPress={() => toggleColorScheme()}
+          >
+            <Hand color={textColor} />
+            <Text className="ml-6 text-base font-medium dark:text-white">
+              Moderation
+            </Text>
+          </TouchableOpacity>
+        </Link>
         <Link href="/settings" asChild>
           <TouchableOpacity
             accessibilityRole="link"
