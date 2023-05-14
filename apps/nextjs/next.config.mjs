@@ -12,7 +12,6 @@ const config = {
   images: {
     domains: [".NEXT_PUBLIC_IMAGEDOMAINS"],
   },
-  future: { webpack5: true },
 };
 
 export default config;
