@@ -2,7 +2,6 @@
 import "./src/env.mjs";
 import "@blueskeet/auth/env.mjs";
 
-/** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
   /** Enables hot reloading for local packages without a build step */
@@ -13,6 +12,7 @@ const config = {
   images: {
     domains: ["i.imgur.com"],
   },
+  future: { webpack5: true },
 };
 
 export default config;
