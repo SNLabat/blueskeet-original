@@ -36,5 +36,8 @@
     "packages/auth",
     "packages/db",
     "packages/config/*"
-  ]
+  ],
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2"
+  }
 }
