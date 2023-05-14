@@ -10,7 +10,7 @@ const config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: {
-    domains: ["i.imgur.com"],
+    domains: [".NEXT_PUBLIC_IMAGEDOMAINS"],
   },
   future: { webpack5: true },
 };
