@@ -1112,6 +1112,7 @@
     react "18.2.0"
     react-dom "18.2.0"
     superjson "1.9.1"
+    webpack "^5.82.1"
     zod "^3.21.4"
 
 "@blueskeet/tailwind-config@^0.1.0", "@blueskeet/tailwind-config@file:/Users/labat/Desktop/blueskeet/packages/config/tailwind":
