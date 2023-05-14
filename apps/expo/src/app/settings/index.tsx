@@ -1,47 +1,35 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { faEllipsisH, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
-import {
-  faAt,
-  faBan,
-  faEye,
-  faLanguage,
-  faLock,
-  faPlus,
-  faTicket,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { useTheme } from "@react-navigation/native";
 
-export default function SettingsPage() {
+export default function ModerationPage() {
   const { colors } = useTheme();
 
   const sections = [
-    { title: "Profiles", options: [{ label: "Add account", icon: faPlus }] },
+    { title: "Profiles", options: [{ label: "Add account" }] },
     {
       title: "Invite a Friend",
-      options: [{ label: "Invites: 5", icon: faTicket }],
+      options: [{ label: "Invites: 5" }],
     },
     {
       title: "Moderation",
       options: [
-        { label: "Content Moderation", icon: faEye },
-        { label: "Muted Accounts", icon: faEyeSlash },
-        { label: "Blocked Accounts", icon: faBan },
+        { label: "Content Moderation" },
+        { label: "Muted Accounts" },
+        { label: "Blocked Accounts" },
       ],
     },
     {
       title: "Advanced",
       options: [
-        { label: "App Passwords", icon: faLock },
-        { label: "Content Languages", icon: faLanguage },
-        { label: "Change my handle", icon: faAt },
+        { label: "App Passwords" },
+        { label: "Content Languages" },
+        { label: "Change my handle" },
       ],
     },
     {
       title: "Danger zone",
-      options: [{ label: "Delete my account", icon: faTrashAlt }],
+      options: [{ label: "Delete my account" }],
     },
   ];
 
@@ -60,10 +48,6 @@ export default function SettingsPage() {
               style={styles.optionContainer}
               onPress={() => handleOptionPress(option)}
             >
-              <FontAwesomeIcon
-                icon={option.icon}
-                style={[styles.optionIcon, { color: colors.text }]}
-              />
               <Text style={[styles.optionText, { color: colors.text }]}>
                 {option.label}
               </Text>
