@@ -19,6 +19,7 @@
   "dependencies": {
     "@blueskeet/eslint-config": "^0.1.0",
     "@manypkg/cli": "^0.20.0",
+    "@tsconfig/recommended": "^1.0.2",
     "@types/prettier": "^2.7.2",
     "eslint": "^8.40.0",
     "lucide-react-native": "^0.216.0",
@@ -36,8 +37,5 @@
     "packages/auth",
     "packages/db",
     "packages/config/*"
-  ],
-  "devDependencies": {
-    "@tsconfig/recommended": "^1.0.2"
-  }
+  ]
 }
