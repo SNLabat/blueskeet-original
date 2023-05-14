@@ -2,18 +2,18 @@ import { Providers } from "./providers";
 import "~/styles/globals.css";
 
 export const metadata = {
-  title: "blueskeet - a bluesky client",
+  title: "Graysky - a bluesky client",
   description: "Experience a whole different skyline.",
   openGraph: {
-    title: "blueskeet - a bluesky client",
+    title: "Graysky - a bluesky client",
     description: "Experience a whole different skyline.",
     type: "website",
     locale: "en_GB",
-    url: "https://blueskeet.app",
-    siteName: "blueskeet",
+    url: "https://graysky.app",
+    siteName: "Graysky",
     images: [
       {
-        url: "https://i.imgur.com/AWE9c61.png",
+        url: "https://graysky.app/graysky.png",
         width: 1024,
         height: 1024,
       },
@@ -21,11 +21,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "blueskeet - a bluesky client",
+    title: "Graysky - a bluesky client",
     description: "Experience a whole different skyline.",
     images: [
       {
-        url: "https://i.imgur.com/AWE9c61.png",
+        url: "https://graysky.app/graysky.png",
         width: 1024,
         height: 1024,
       },

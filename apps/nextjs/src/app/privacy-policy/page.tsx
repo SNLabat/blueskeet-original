@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "blueskeet | Privacy Policy",
+  title: "Graysky | Privacy Policy",
   description: "Privacy Policy",
 };
 
@@ -49,14 +49,14 @@ export default function Page() {
         <li>
           <p>
             <strong className="font-bold">Application</strong> refers to
-            blueskeet, the software program provided by the Company.
+            Graysky, the software program provided by the Company.
           </p>
         </li>
         <li>
           <p>
             <strong className="font-bold">Company</strong> (referred to as
             either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or
-            &quot;Our&quot; in this Agreement) refers to blueskeet.
+            &quot;Our&quot; in this Agreement) refers to Graysky.
           </p>
         </li>
         <li>
@@ -405,7 +405,7 @@ export default function Page() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: @snlabat@gmail.com</li>
+        <li>By email: mozzius@protonmail.com</li>
       </ul>
     </div>
   );

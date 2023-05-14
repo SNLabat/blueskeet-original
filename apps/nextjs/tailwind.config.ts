@@ -1,8 +1,10 @@
-import type { Config } from "tailwindcss";
+const baseConfig = require("@blueskeet/tailwind-config");
 
-import baseConfig from "@blueskeet/tailwind-config";
-
-export default {
+module.exports = {
   content: ["./src/**/*.tsx"],
   presets: [baseConfig],
-} satisfies Config;
+  plugins: [
+    require("@tailwindcss/forms"),
+    // Other plugins can be added here
+  ],
+};
