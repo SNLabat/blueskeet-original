@@ -1,8 +1,6 @@
-// app/page.tsx
 import Image from "next/image";
-import { UserButton } from "@clerk/nextjs";
 
-import background from "~/assets/blueskeet.png";
+import background from "~/assets/graysky.png";
 import { EmailInput } from "./email-input";
 
 export default function LandingPage() {
@@ -23,7 +21,6 @@ export default function LandingPage() {
         </p>
       </div>
       <EmailInput />
-      <UserButton />
     </main>
   );
 }

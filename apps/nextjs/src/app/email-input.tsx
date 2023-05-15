@@ -59,7 +59,7 @@ export const EmailInput = () => {
             out{" "}
             <a
               className="underline"
-              href="https://staging.bsky.app/labat.bsky.social"
+              href="https://staging.bsky.app/profile/labat.bsky.social"
             >
               @labat.bsky.social
             </a>{" "}
@@ -77,7 +77,7 @@ export const EmailInput = () => {
               className="underline"
               href="https://staging.bsky.app/profile/labat.bsky.social"
             >
-              @snlabat@gmail.com
+              @labat.bsky.social
             </a>{" "}
             know?
           </p>

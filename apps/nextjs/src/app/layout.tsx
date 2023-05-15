@@ -1,10 +1,5 @@
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-
 import { Providers } from "./providers";
 import "~/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "blueskeet - a bluesky client",
@@ -14,7 +9,7 @@ export const metadata = {
     description: "Experience a whole different skyline.",
     type: "website",
     locale: "en_GB",
-    url: "https://blueskeet.app",
+    url: "https://graysky.app",
     siteName: "blueskeet",
     images: [
       {
@@ -41,13 +36,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <head />
-        <body className={inter.className}>
-          <Providers>{children}</Providers>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html>
+      <head />
+      <Providers>
+        <body>{children}</body>
+      </Providers>
+    </html>
   );
 }

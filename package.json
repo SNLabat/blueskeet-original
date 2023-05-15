@@ -1,5 +1,5 @@
 {
-  "name": "blueskeet",
+  "name": "@blueskeet/app",
   "private": true,
   "engines": {
     "node": ">=v18.15.0"
